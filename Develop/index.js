@@ -7,7 +7,7 @@ const fs = require('fs');
 const criteria = [
     {
         type: `input`,
-        name: `project-title`,
+        name: `title`,
         message: `What is your project title?`,
     },
     {
@@ -39,10 +39,10 @@ const criteria = [
         type: `input`,
         name: `license`,
         message: `Choose a License from the following:
-        \n 1. MIT License
-        \n 2. Mozilla Public License 2.0
-        \n 3. Boost Software License 1.0
-        \n The Unlicense`,
+        \n 1. MIT_License
+        \n 2. Mozilla_Public_License 2.0
+        \n 3. Boost_Software_License 1.0
+        \n 4. The_Unlicense`,
     },
     {
         type: `input`,

@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(data){
-  const badgeLink = `![Licence badge](https://img.shields.io/badge/Licence-${data.license}-orange)`;
+  const badgeLink = `![Licence badge](https://img.shields.io/badge/licence-${data.license}-orange.svg)`;
   if(data.license === `MIT`){
     return badgeLink;
   }else if(data.license === `Boost-Software-License-1.0`){
@@ -23,9 +23,9 @@ function renderLicenseLink(data) {
 
   if(data.license === `MIT`){
     return MIT;
-  }else if(data.license === `Boost-Software-License-1.0`){
+  }else if(data.license === `Boost Software License 1.0`){
     return Boost;
-  }else if (data.license === `The-Unlicense`){
+  }else if (data.license === `The Unlicense`){
     return Unlicense;
   }else{
     return Mozilla;
@@ -40,38 +40,32 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ## Table of Contents
-  *[Description](#description)
-  *[Usage](#usage)
-  *[Installation](#installation)  
-  *[Contribution](#contribution)  
-  *[Testing](#testing)  
-  *[Licenses](#licenses)  
-  *[Socials](#socials)
+  * [Description](#description)
+  * [Usage](#usage)
+  * [Installation](#installation)  
+  * [Contribution](#contribution)  
+  * [Testing](#testing)  
+  * [Licenses](#licenses)  
+  * [Socials](#socials)
 
   ## Description
-
   ${data.description}
 
   ## Usage
-
   ${data.usage}
 
   ## Installation 
-
   ${data.installation}
 
   ##Contributing Guidelines
-
   ${data.contribution}
 
   ## Testing 
-
   ${data.testing}
 
   ## Licenses
-
-  [${data.license}]
-  (${renderLicenseLink(data)})
+  [${data.license}](${renderLicenseLink(data)})
+  ${renderLicenseBadge(data)} 
 
   ## Socials
 
