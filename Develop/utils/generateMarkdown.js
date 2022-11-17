@@ -57,7 +57,7 @@ function generateMarkdown(data) {
   ## Installation 
   ${data.installation}
 
-  ##Contributing Guidelines
+  ## Contributing Guidelines
   ${data.contribution}
 
   ## Testing 
